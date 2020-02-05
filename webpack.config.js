@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
     context: __dirname,
-    entry: "./index.js",
+    entry: "./lib/space_racer.js",
     output: {
         path: path.resolve(__dirname),
         filename: "./dist/bundle.js"
