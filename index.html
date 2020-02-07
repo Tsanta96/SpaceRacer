@@ -3,11 +3,6 @@
     <head>
         <title>SpaceRacer</title>
         <script src="./dist/bundle.js"></script>
-        <script>
-            window.onload = function () {
-                var context = new AudioContext();
-            }
-        </script>
         <link rel="stylesheet" type="text/css" href="./assets/stylesheets/space_runner.css">
         <link rel="stylesheet" type="text/css" href="./assets/stylesheets/reset.css">
         <link href="https://fonts.googleapis.com/css?family=Audiowide|Fugaz+One|Play:700&display=swap" rel="stylesheet">
@@ -22,6 +17,40 @@
                 <source src="assets/sounds/Welcome_to_SpaceRacer.mp3" type="audio/mp3">
             </audio>
             <canvas id="game-canvas" height="400" width="800" tabindex="1"></canvas>
+            <div class="main-menu-screen">
+            </div>
+            <section id="main-menu" class="main-menu">
+                <div class="play-btn">
+                    <button><img src="./assets/images/main-menu-play.svg"></button>
+                </div>
+                <div class="info-and-highscores">
+                    <p class="info">Info</p>
+                    <p class="highscores">High Scores</p>
+                </div>
+            </section>
+        </div>
+        <div class="planets">
+            <img id="sun" src="assets/images/sun.svg">
+            <img id="mercury" src="https://img.icons8.com/color/96/000000/mercury-planet.png">
+            <img id="venus" src="https://img.icons8.com/color/96/000000/venus-planet.png">
+            <img id="earth" src="https://img.icons8.com/color/96/000000/earth-planet.png">
+            <img id="mars" src="https://img.icons8.com/color/96/000000/mars-planet.png">
+            <img id="jupiter" src="https://img.icons8.com/color/96/000000/jupiter-planet.png">
+            <img id="saturn" src="https://img.icons8.com/color/96/000000/saturn-planet.png">
+            <img id="uranus" src="https://img.icons8.com/color/96/000000/uranus-planet.png">
+            <img id="neptune" src="https://img.icons8.com/color/96/000000/neptune-planet.png">
+            <img id="pluto" src="https://img.icons8.com/color/96/000000/pluto-dwarf-planet.png">
+        </div>
+        <div class="credits">
+            <a href="https://icons8.com/icon/62032/mercury-planet">Mercury Planet icon by Icons8</a>
+            <a href="https://icons8.com/icon/62041/venus-planet">Venus Planet icon by Icons8</a>
+            <a href="https://icons8.com/icon/55207/earth-planet">Earth Planet icon by Icons8</a>
+            <a href="https://icons8.com/icon/62033/mars-planet">Mars Planet icon by Icons8</a>
+            <a href="https://icons8.com/icon/62037/jupiter-planet">Jupiter Planet icon by Icons8</a>
+            <a href="https://icons8.com/icon/62038/saturn-planet">Saturn Planet icon by Icons8</a>
+            <a href="https://icons8.com/icon/62040/uranus-planet">Uranus Planet icon by Icons8</a>
+            <a href="https://icons8.com/icon/62035/neptune-planet">Neptune Planet icon by Icons8</a>
+            <a href="https://icons8.com/icon/62036/pluto-dwarf-planet">Pluto Dwarf Planet icon by Icons8</a>
         </div>
         <!-- <canvas id="background-canvas" height="400" width="800"></canvas>
         <canvas id="foreground-canvas" height="400" width="800"></canvas> -->

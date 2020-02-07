@@ -7,13 +7,20 @@ body {
 }
 
 #sound-icon {
-    /* content:url("../images/speaker.svg"); */
     position: absolute;
     width: 45px;
     top: 30px;
     left: 60px;
-    /* margin-left: 50px; */
     animation: fadeAndScale 1.5s ease-in;
+}
+
+#sound-icon:hover {
+    position: absolute;
+    width: 45px;
+    top: 30px;
+    left: 60px;
+    animation: fadeAndScale 1.5s ease-in;
+    cursor: pointer;
 }
 
 .sound-icon-playing {
@@ -22,6 +29,15 @@ body {
     width: 45px;
     top: 30px;
     left: 60px;
+}
+
+.sound-icon-playing:hover {
+    content: url("../images/mute.svg");
+    position: absolute;
+    width: 45px;
+    top: 30px;
+    left: 60px;
+    cursor: pointer;
 }
 
 .title {
@@ -49,10 +65,299 @@ body {
     }
 }
 
+/* Main Menu -----------------------------------------------------------------*/
+
+.main-menu-screen {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    margin-top: -404px;
+    width: 800px;
+    height: 405px;
+    /* opacity: 0.9; */
+}
+
+.main-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -404px;
+    width: 800px;
+    height: 405px;
+}
+
+.play-btn {
+    padding: 6px;
+    margin: 0 auto;
+    margin-top: 14%;
+    width: 100px;
+    height: 100px;
+    border: none;
+    outline: none;
+    color: black;
+    background: rgb(173, 173, 173);
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.play-btn:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.play-btn:active {
+    color: #000
+}
+
+.play-btn:active:after {
+    background: transparent;
+}
+
+.play-btn:hover:before {
+    opacity: 1;
+}
+
+.play-btn:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+.info-and-highscores {
+    margin-top: 12%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: 'Audiowide', cursive;
+    font-size: 25px;
+}
+
+.info {
+    width: 70px;
+    height: 35px;
+    border: none;
+    outline: none;
+    color: black;
+    background: rgb(173, 173, 173);
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    text-align: center;
+    padding: 4px;
+}
+
+.info:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.info:active {
+    color: #000
+}
+
+.info:active:after {
+    background: transparent;
+}
+
+.info:hover:before {
+    opacity: 1;
+}
+
+.info:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+.highscores {
+    width: 180px;
+    height: 35px;
+    border: none;
+    outline: none;
+    color: black;
+    background: rgb(173, 173, 173);
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    text-align: center;
+    padding: 4px;
+}
+
+.highscores:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.highscores:active {
+    color: #000
+}
+
+.highscores:active:after {
+    background: transparent;
+}
+
+.highscores:hover:before {
+    opacity: 1;
+}
+
+.highscores:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+
+
+
+/* Game Canvas ---------------------------------------------------------------*/
+
 .game-canvas {
     width: 800px;
     margin: 0 auto;
     border: 1px solid blue;
+    z-index: 2;
+}
+
+/* Planet Styles -------------------------------------------------------------*/
+
+.planets {
+    /* margin-top: -30px; */
+    margin-top: -2%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#sun {
+    width: 350px;
+    margin-left: -200px;
+}
+
+#mercury {
+    width: 60px;
+    margin-left: 3%;
+}
+
+#venus {
+    width: 90px;
+    margin-left: 2%;
+}
+
+#earth {
+    width: 130px;
+    margin-left: 2%;
+}
+
+#mars {
+    width: 110px;
+    margin-left: 2%;
+}
+
+#jupiter {
+    width: 200px;
+    margin-left: 2%;
+}
+
+#saturn {
+    width: 180px;
+    margin-left: 2%;
+}
+
+#uranus {
+    width: 160px;
+    margin-left: 2%;
+}
+
+#neptune {
+    width: 150px;
+    margin-left: 2%;
+}
+
+#pluto {
+    width: 30px;
+    margin-left: 2%;
+}
+
+.select-planet {
+    border-top: 4px solid purple;
+    border-radius: 100px;
+    padding-top: 10px;
 }
 
 /* canvas:focus {
