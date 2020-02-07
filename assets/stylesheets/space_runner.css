@@ -1,0 +1,26 @@
+body {
+    background-color: black;
+}
+
+.title {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 30px;
+    font-size: 40px;
+    margin-bottom: 20px;
+    /* font-family: 'Play', sans-serif; */
+    font-family: 'Audiowide', cursive;
+    /* font-family: 'Fugaz One', cursive; */
+    color: white;
+    
+}
+
+.game-canvas {
+    width: 800px;
+    margin: 0 auto;
+    border: 1px solid blue;
+}
+
+/* canvas:focus {
+    outline: none;
+} */
