@@ -2,6 +2,28 @@ body {
     background-color: black;
 }
 
+.img-and-title {
+    position: relative;
+}
+
+#sound-icon {
+    /* content:url("../images/speaker.svg"); */
+    position: absolute;
+    width: 45px;
+    top: 30px;
+    left: 60px;
+    /* margin-left: 50px; */
+    animation: fadeAndScale 1.5s ease-in;
+}
+
+.sound-icon-playing {
+    content:url("../images/mute.svg");
+    position: absolute;
+    width: 45px;
+    top: 30px;
+    left: 60px;
+}
+
 .title {
     width: 300px;
     margin: 0 auto;

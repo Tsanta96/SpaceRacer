@@ -13,11 +13,14 @@
         <link href="https://fonts.googleapis.com/css?family=Audiowide|Fugaz+One|Play:700&display=swap" rel="stylesheet">
     </head>
     <body>
-        <h1 class="title">Space Racer</h1>
+        <div class="sound-icon-and-title">
+            <img id="sound-icon" src="assets/images/speaker.svg" alt="Play Sound">
+            <h1 class="title">Space Racer</h1>
+        </div>
         <div class="game-canvas">
-            <!-- <audio autoplay loop>
+            <audio id="welcome-audio" loop>
                 <source src="assets/sounds/Welcome_to_SpaceRacer.mp3" type="audio/mp3">
-            </audio> -->
+            </audio>
             <canvas id="game-canvas" height="400" width="800" tabindex="1"></canvas>
         </div>
         <!-- <canvas id="background-canvas" height="400" width="800"></canvas>
