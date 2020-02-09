@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://tsanta96.github.io/SpaceRacer/",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "webpack": "webpack --watch --mode=development"
+    "webpack": "webpack --watch --mode=development",
+    "deploy": "npm run build&&gh-pages -d build"
   },
   "author": "",
   "license": "ISC",
