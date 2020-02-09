@@ -312,6 +312,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
+    overflow: hidden;
 }
 
 #sun {
@@ -350,12 +351,12 @@ body {
 }
 
 #uranus {
-    width: 160px;
+    width: 150px;
     margin-left: 2%;
 }
 
 #neptune {
-    width: 150px;
+    width: 140px;
     margin-left: 2%;
 }
 
