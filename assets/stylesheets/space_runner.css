@@ -92,10 +92,17 @@ body {
     display: none;
 }
 
+#your-score {
+    font-family: 'Audiowide', cursive;
+    width: 220px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
 .play-btn {
     padding: 6px;
     margin: 0 auto;
-    margin-top: 14%;
+    margin-top: 10%;
     width: 100px;
     height: 100px;
     border: none;
