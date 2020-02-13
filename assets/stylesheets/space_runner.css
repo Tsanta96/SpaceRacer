@@ -99,6 +99,8 @@ body {
     margin-top: 30px;
 }
 
+/* Play button----------------------------------------------------------------*/
+
 .play-btn {
     padding: 6px;
     margin: 0 auto;
@@ -164,6 +166,18 @@ body {
     justify-content: space-around;
     font-family: 'Audiowide', cursive;
     font-size: 25px;
+}
+
+.info-page {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -404px;
+    width: 800px;
+    height: 405px;
 }
 
 .info {
