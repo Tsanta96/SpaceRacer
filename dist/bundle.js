@@ -307,8 +307,13 @@ function () {
     key: "openInfo",
     value: function openInfo() {
       document.getElementById('info-page').classList.remove('clear');
-      document.getElementById('info-page').classList.add('info-page');
-      console.log('test');
+      document.getElementById('info-page').classList.add('info-page'); //Back to main screen
+
+      document.getElementById('info-back-button').addEventListener('click', function () {
+        console.log('test');
+        document.getElementById('info-page').classList.remove('info-page');
+        document.getElementById('info-page').classList.add('clear');
+      });
     }
   }, {
     key: "gameOver",
