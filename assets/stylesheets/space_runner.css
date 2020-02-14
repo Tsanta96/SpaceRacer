@@ -99,6 +99,8 @@ body {
     margin-top: 30px;
 }
 
+/* Play button----------------------------------------------------------------*/
+
 .play-btn {
     padding: 6px;
     margin: 0 auto;
@@ -375,3 +377,51 @@ body {
 /* canvas:focus {
     outline: none;
 } */
+
+/* Info Page------------------------------------------------------------------*/
+
+.info-page {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -404px;
+    width: 800px;
+    height: 405px;
+}
+
+.info-arrow-and-back {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.info-back-button {
+    color: rgb(0, 0, 206);
+    font-family: 'Audiowide',cursive;
+}
+
+.material-icons {
+    color: blue;
+}
+
+.info-page-header {
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    font-family: 'Audiowide', cursive;
+    font-size: 30px;
+    color: rgb(0, 0, 206);
+    border: 3px solid rgb(35, 57, 255);
+    padding: 10px;
+}
+
+.info-page-paragraph {
+    width: 70%;
+    height: 40%;
+    margin: 0 auto;
+    font-family: 'Audiowide',cursive;
+}

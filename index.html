@@ -6,6 +6,7 @@
         <link rel="stylesheet" type="text/css" href="./assets/stylesheets/space_runner.css">
         <link rel="stylesheet" type="text/css" href="./assets/stylesheets/reset.css">
         <link href="https://fonts.googleapis.com/css?family=Audiowide|Fugaz+One|Play:700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
     <body>
         <div class="sound-icon-and-title">
@@ -25,10 +26,23 @@
                     <button id="play-game"><img src="./assets/images/main-menu-play.svg"></button>
                 </div>
                 <div class="info-and-highscores">
-                    <p class="info">Info</p>
+                    <p id="info" class="info">Info</p>
                     <p class="highscores">High Scores</p>
                 </div>
             </section>
+            <div id="info-page" class="clear">
+                <div class="info-arrow-and-back">
+                    <button class="info-back-arrow"><i class="material-icons">arrow_back_ios</i></button>
+                    <button id="info-back-button" class="info-back-button" type="button">Back</button>
+                </div>
+                <h2 class="info-page-header">Info Page</h2>
+                <p class="info-page-paragraph">You have just completed the drop off of the last known bottle of Jack Daniels to the Emporer of Mercury. 
+                    The solar system is dying and most civilizations have already migrated to a neighboring star community rigged with worm holes, strobe lights,
+                    and other strange phenomena. The Sun has been on it's last breath for thousands of years now and at this moment it is shaping up for a massive 
+                    explosion capable of disintegrating what remains of the solar system. It is now up to you, Captain Stardust, to bring your ship and its occupants to safety by 
+                    evacuating the solar system before it is too late.......Good Luck!</p>
+            </div>
+            
         </div>
         <div class="planets">
             <img id="sun" src="assets/images/sun.svg">
