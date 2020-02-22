@@ -9,7 +9,7 @@ increasingly difficult.
 ## Technologies
 
 SpaceRacer was built entirely with pure Javascript and styled with CSS. I make 
-extensive use of the HTML Canvas Api as this provides the ability to animate by 
+extensive use of the HTML Canvas API as this provides the ability to animate by 
 continuously redrawing objects and rendering new frames.
 
 ## Features
