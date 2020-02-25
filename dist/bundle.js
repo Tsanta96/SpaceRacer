@@ -190,13 +190,53 @@ function () {
     this.levelCount = 0;
     this.playMusic = false;
     this.registerEvents();
+    this.setScoreBoard();
     this.restart(); // this.setSounds();
 
     this.changeLanes = this.changeLanes.bind(this);
     this.play = this.play.bind(this);
+    this.setScoreBoard = this.setScoreBoard.bind(this);
   }
 
   _createClass(Game, [{
+    key: "setScoreBoard",
+    value: function setScoreBoard() {
+      for (var i = 1; i <= 10; i++) {
+        if (!localStorage[i]) localStorage.setItem(i, 0);
+      }
+    }
+  }, {
+    key: "shiftScoreIdx",
+    value: function shiftScoreIdx(idx) {
+      for (var i = 10; i > idx; i--) {
+        localStorage[i] = localStorage[i - 1];
+        console.log("i", i);
+        console.log("localStorage[i]", localStorage[i]);
+      }
+
+      return localStorage;
+    }
+  }, {
+    key: "logScore",
+    value: function logScore(score) {
+      //BEHAVIOR:
+      //Logs top 10 highest scores
+      //10 spots start off as "Not attempted"
+      //After the end of each run, checks the values in the local storage object
+      //If any "Not attempted values", substitute value in for those first.
+      //If the score is higher than any of the top 10, then add the value in its respective place and remove the last value.
+      for (var i = 1; i <= 10; i++) {
+        if (score > localStorage[i]) {
+          this.shiftScoreIdx(i);
+          localStorage[i] = score;
+          return;
+        }
+      }
+
+      console.log("keys", Object.keys(localStorage));
+      console.log("values", Object.values(localStorage));
+    }
+  }, {
     key: "animate",
     value: function animate() {
       this.spaceTrack.animate(this.canvasContext);
@@ -205,7 +245,10 @@ function () {
 
       if (this.gameOver()) {
         alert("EXPLOSION!!");
-        var yourScore = this.score;
+        var yourScore = this.score; // ------------------------
+
+        this.logScore(yourScore); // ------------------------
+
         console.log('score ---> ', yourScore);
         document.getElementById('your-score').innerText = "Your score was ".concat(yourScore, "!");
         this.clearLevelIndicator();
@@ -264,6 +307,9 @@ function () {
       document.getElementById('info').addEventListener("click", function () {
         _this.openInfo();
       });
+      document.getElementById('high-scores').addEventListener("click", function () {
+        _this.openHighScores();
+      });
     }
   }, {
     key: "changeLanes",
@@ -310,10 +356,34 @@ function () {
       document.getElementById('info-page').classList.add('info-page'); //Back to main screen
 
       document.getElementById('info-back-button').addEventListener('click', function () {
-        console.log('test');
         document.getElementById('info-page').classList.remove('info-page');
         document.getElementById('info-page').classList.add('clear');
       });
+    }
+  }, {
+    key: "openHighScores",
+    value: function openHighScores() {
+      document.getElementById('high-scores-page').classList.remove('clear');
+      document.getElementById('high-scores-page').classList.add('high-scores-page'); //Back to main page
+
+      document.getElementById('high-scores-back-button').addEventListener('click', function () {
+        document.getElementById('high-scores-page').classList.remove('high-scores-page');
+        document.getElementById('high-scores-page').classList.add('clear');
+      }); // Render ranking and scores
+
+      var scoresTable = document.getElementById('high-scores-display');
+      var tr = document.createElement("TR");
+
+      for (var i = 1; i <= 10; i++) {
+        var row = document.createElement("TR");
+        var rankTd = document.createElement("TD");
+        var scoreTd = document.createElement("TD");
+        rankTd.innerText = i;
+        scoreTd.innerText = localStorage[i];
+        row.appendChild(rankTd);
+        row.appendChild(scoreTd);
+        scoresTable.appendChild(row);
+      }
     }
   }, {
     key: "gameOver",
