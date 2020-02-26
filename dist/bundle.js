@@ -191,12 +191,12 @@ function () {
     this.playMusic = false;
     this.registerEvents();
     this.setScoreBoard();
-    this.restart(); // this.setSounds();
-
+    this.restart();
     this.changeLanes = this.changeLanes.bind(this);
     this.play = this.play.bind(this);
     this.setScoreBoard = this.setScoreBoard.bind(this);
-  }
+  } //Retrieve scores from local storage
+
 
   _createClass(Game, [{
     key: "setScoreBoard",
@@ -204,7 +204,8 @@ function () {
       for (var i = 1; i <= 10; i++) {
         if (!localStorage[i]) localStorage.setItem(i, 0);
       }
-    }
+    } //Shifts scores back if new score is added
+
   }, {
     key: "shiftScoreIdx",
     value: function shiftScoreIdx(idx) {
@@ -215,16 +216,11 @@ function () {
       }
 
       return localStorage;
-    }
+    } //logs a new highscore if it qualifies
+
   }, {
     key: "logScore",
     value: function logScore(score) {
-      //BEHAVIOR:
-      //Logs top 10 highest scores
-      //10 spots start off as "Not attempted"
-      //After the end of each run, checks the values in the local storage object
-      //If any "Not attempted values", substitute value in for those first.
-      //If the score is higher than any of the top 10, then add the value in its respective place and remove the last value.
       for (var i = 1; i <= 10; i++) {
         if (score > localStorage[i]) {
           this.shiftScoreIdx(i);
@@ -232,9 +228,6 @@ function () {
           return;
         }
       }
-
-      console.log("keys", Object.keys(localStorage));
-      console.log("values", Object.values(localStorage));
     }
   }, {
     key: "animate",
@@ -245,11 +238,10 @@ function () {
 
       if (this.gameOver()) {
         alert("EXPLOSION!!");
-        var yourScore = this.score; // ------------------------
+        var yourScore = this.score; //Checks if score is greater than another high score, and if so then it gets added
 
-        this.logScore(yourScore); // ------------------------
+        this.logScore(yourScore); //Displays your score on main menu
 
-        console.log('score ---> ', yourScore);
         document.getElementById('your-score').innerText = "Your score was ".concat(yourScore, "!");
         this.clearLevelIndicator();
         this.restart();
@@ -291,24 +283,67 @@ function () {
       this.animate();
     }
   }, {
-    key: "registerEvents",
-    value: function registerEvents() {
+    key: "gameOver",
+    value: function gameOver() {
+      if (this.level.collision(this.player.playerBounds()) === true) {
+        return true;
+      }
+    }
+  }, {
+    key: "scoreTracker",
+    value: function scoreTracker() {
       var _this = this;
 
+      setInterval(function () {
+        _this.score += 1;
+      }, 100);
+    }
+  }, {
+    key: "drawScore",
+    value: function drawScore() {
+      var loc = {
+        x: 7 / 8 * this.dimensions.width,
+        y: this.dimensions.height / 8
+      };
+      this.canvasContext.font = "30px Arial";
+      this.canvasContext.fillStyle = "white";
+      this.canvasContext.fillText(this.score, loc.x, loc.y);
+      this.canvasContext.strokeStyle = "black";
+      this.canvasContext.lineWidth = 2;
+    }
+  }, {
+    key: "increaseLevel",
+    value: function increaseLevel() {
+      this.level.increaseLevel(this.score);
+    }
+  }, {
+    key: "clearLevelIndicator",
+    value: function clearLevelIndicator() {
+      var planetsArr = ['mercury', 'venus', 'earth', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune', 'pluto'];
+
+      for (var i = 0; i < planetsArr.length; i++) {
+        document.getElementById(planetsArr[i]).classList.remove('select-planet');
+      }
+    }
+  }, {
+    key: "registerEvents",
+    value: function registerEvents() {
+      var _this2 = this;
+
       this.canvasContext.canvas.addEventListener("keydown", function (e) {
-        _this.changeLanes(e);
+        _this2.changeLanes(e);
       });
       document.getElementById('sound-icon').addEventListener("click", function () {
-        _this.toggleMusic();
+        _this2.toggleMusic();
       });
       document.getElementById('play-game').addEventListener("click", function () {
-        _this.playGame();
+        _this2.playGame();
       });
       document.getElementById('info').addEventListener("click", function () {
-        _this.openInfo();
+        _this2.openInfo();
       });
       document.getElementById('high-scores').addEventListener("click", function () {
-        _this.openHighScores();
+        _this2.openHighScores();
       });
     }
   }, {
@@ -386,53 +421,6 @@ function () {
         row.appendChild(scoreTd);
         scoresTable.appendChild(row);
       }
-    }
-  }, {
-    key: "gameOver",
-    value: function gameOver() {
-      if (this.level.collision(this.player.playerBounds()) === true) {
-        return true;
-      }
-    }
-  }, {
-    key: "scoreTracker",
-    value: function scoreTracker() {
-      var _this2 = this;
-
-      setInterval(function () {
-        _this2.score += 1;
-      }, 100);
-    }
-  }, {
-    key: "drawScore",
-    value: function drawScore() {
-      var loc = {
-        x: 7 / 8 * this.dimensions.width,
-        y: this.dimensions.height / 8
-      };
-      this.canvasContext.font = "30px Arial";
-      this.canvasContext.fillStyle = "white";
-      this.canvasContext.fillText(this.score, loc.x, loc.y);
-      this.canvasContext.strokeStyle = "black";
-      this.canvasContext.lineWidth = 2;
-    }
-  }, {
-    key: "increaseLevel",
-    value: function increaseLevel() {
-      this.level.increaseLevel(this.score);
-    }
-  }, {
-    key: "clearLevelIndicator",
-    value: function clearLevelIndicator() {
-      document.getElementById('mercury').classList.remove('select-planet');
-      document.getElementById('venus').classList.remove('select-planet');
-      document.getElementById('earth').classList.remove('select-planet');
-      document.getElementById('mars').classList.remove('select-planet');
-      document.getElementById('jupiter').classList.remove('select-planet');
-      document.getElementById('saturn').classList.remove('select-planet');
-      document.getElementById('uranus').classList.remove('select-planet');
-      document.getElementById('neptune').classList.remove('select-planet');
-      document.getElementById('pluto').classList.remove('select-planet');
     }
   }]);
 
