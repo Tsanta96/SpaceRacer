@@ -369,9 +369,11 @@ function () {
       document.getElementById('high-scores-back-button').addEventListener('click', function () {
         document.getElementById('high-scores-page').classList.remove('high-scores-page');
         document.getElementById('high-scores-page').classList.add('clear');
-      }); // Render ranking and scores
+      }); // remove then re-render ranking and scores
 
-      var scoresTable = document.getElementById('high-scores-display');
+      var scoresTable = document.getElementById('high-scores-display'); //Clears high score table first, before re-rendering scores 1-10
+
+      scoresTable.innerHTML = '';
       var tr = document.createElement("TR");
 
       for (var i = 1; i <= 10; i++) {
