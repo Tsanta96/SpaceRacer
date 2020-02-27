@@ -411,7 +411,7 @@ body {
 .info-page-header {
     margin: 0 auto;
     margin-top: 25px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     font-family: 'Audiowide', cursive;
     font-size: 30px;
     color: rgb(0, 0, 206);
@@ -438,6 +438,32 @@ body {
     margin-top: -404px;
     width: 800px;
     height: 405px;
+}
+
+.highscores-page-header {
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    font-family: 'Audiowide', cursive;
+    font-size: 30px;
+    color: rgb(0, 0, 206);
+    border: 3px solid rgb(35, 57, 255);
+    padding: 10px;
+}
+
+table {
+    border: 1px solid black;
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 15px;
+    font-family: 'Audiowide', cursive;
+    font-size: 15px;
+    background-image: linear-gradient(rgb(71, 71, 255), rgb(146, 146, 146));
+    color: white;
+}
+
+tr {
+    text-align: center;
 }
 
 /* Controls-------------------------------------------------------------------*/
