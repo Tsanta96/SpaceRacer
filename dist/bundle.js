@@ -116,8 +116,7 @@ function () {
 
     this.dimensions = dimensions;
     this.x = CONSTANTS.ASTEROID_LANES[Math.floor(Math.random() * CONSTANTS.ASTEROID_LANES.length)];
-    this.y = yCoordinate; // this.passed = false;
-
+    this.y = yCoordinate;
     this.imageSprite = new Image();
     this.imageSprite.src = './assets/images/asteroid.svg';
     this.Id = Math.floor(Math.random() * 9) + 1;
@@ -136,11 +135,7 @@ function () {
   }, {
     key: "drawAsteroid",
     value: function drawAsteroid(ctx, x, y) {
-      ctx.drawImage(this.imageSprite, x - 30, y - 30, 60, 60); // ctx.beginPath();
-      // ctx.arc(x-30, y-30, 3, 0, 2 * Math.PI, false);
-      // ctx.fillStyle = 'red';
-      // ctx.fill();
-      // this.Id += 1;
+      ctx.drawImage(this.imageSprite, x - 30, y - 30, 60, 60);
     }
   }]);
 
@@ -476,7 +471,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 var CONSTANTS = {
   ASTEROID_LANES: _space_track__WEBPACK_IMPORTED_MODULE_3__["SPACE_TRACK_CONSTANTS"].LANES,
   ASTEROID_SPEED: 3,
-  // ASTEROID_WIDTH: 80,
   ASTEROID_SPACING: 400,
   WARM_UP_SECONDS: 1,
   PLANET_DURATION: 100,
@@ -490,9 +484,7 @@ function () {
 
     this.dimensions = dimensions;
     this.ctx = ctx;
-    this.level = CONSTANTS.LEVELS[0]; // this.explosionSprite = new Image();
-    // this.explosionSprite.src = './assets/images/explosion.svg';
-
+    this.level = CONSTANTS.LEVELS[0];
     this.createAsteroids();
   }
 
@@ -557,10 +549,6 @@ function () {
       this.asteroids.forEach(function (asteroid, idx) {
         if (playerBounds.centerX === asteroid.x) {
           if (playerBounds.centerY >= asteroid.y && playerBounds.centerY <= asteroid.y + buffer) {
-            collision = true; // setInterval(() => {
-            //     return collision;
-            // }, 5);
-
             collision = true;
           }
         }
@@ -679,16 +667,10 @@ function () {
         default:
           console.log("testing");
       }
-    }
-  }, {
-    key: "drawExplosion",
-    value: function drawExplosion(ctx) {
-      this.ctx.drawImage(this.explosionSprite, this.x - 20, this.y - 20, 40, 40);
-      console.log(ctx); // ctx.beginPath();
-      // ctx.arc(this.x - 20, this.y - 20, 3, 0, 2 * Math.PI, false);
-      // ctx.fillStyle = 'red';
-      // ctx.fill();
-    }
+    } // drawExplosion(ctx) {
+    //     this.ctx.drawImage(this.explosionSprite, this.x - 20, this.y - 20, 40, 40);
+    // }
+
   }]);
 
   return Level;
@@ -757,15 +739,12 @@ function () {
   }, {
     key: "animate",
     value: function animate(ctx) {
-      this.drawPlayer(ctx); // console.log(this.playerBounds());
+      this.drawPlayer(ctx);
     }
   }, {
     key: "drawPlayer",
     value: function drawPlayer(ctx) {
-      ctx.drawImage(this.playerSprite, this.x - 20, this.y - 20, 40, 40); // ctx.beginPath();
-      // ctx.arc(this.x - 20, this.y - 20, 3, 0, 2 * Math.PI, false);
-      // ctx.fillStyle = '#f3d078';
-      // ctx.fill();
+      ctx.drawImage(this.playerSprite, this.x - 20, this.y - 20, 40, 40);
     }
   }, {
     key: "movePlayer",
@@ -781,9 +760,6 @@ function () {
   }, {
     key: "playerBounds",
     value: function playerBounds() {
-      // const boundsHash = {}
-      // for (let i = this.x; i < 10; i++) {
-      // }
       return {
         centerY: this.y,
         centerX: this.x,
@@ -792,11 +768,7 @@ function () {
         leftY: this.y,
         leftX: this.x - 10,
         rightY: this.y,
-        rightX: this.x + 10 // left: this.x - 20,
-        // right: this.x + 40,
-        // top: this.y + 40,
-        // bottom: this.y
-
+        rightX: this.x + 10
       };
     }
   }]);
@@ -871,8 +843,7 @@ function () {
     this.ctx = ctx;
     this.backgroundImg = new Image();
     this.backgroundImg.src = './assets/images/space_background_2.jpeg';
-    this.renderBackground(this.ctx); // this.playerSprite = new Image();
-    // this.playerSprite.src = './assets/images/spaceship.svg';
+    this.renderBackground(this.ctx);
   }
 
   _createClass(SpaceTrack, [{
