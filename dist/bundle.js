@@ -409,6 +409,15 @@ function () {
       var scoresTable = document.getElementById('high-scores-display'); //Clears high score table first, before re-rendering scores 1-10
 
       scoresTable.innerHTML = '';
+      var headTr = document.createElement("TR");
+      var rankTh = document.createElement("TH");
+      rankTh.innerText = "Rank";
+      var scoreTh = document.createElement("TH");
+      scoreTh.innerText = "Score"; //rank and score headers of columns
+
+      headTr.appendChild(rankTh);
+      headTr.appendChild(scoreTh);
+      scoresTable.appendChild(headTr);
       var tr = document.createElement("TR");
 
       for (var i = 1; i <= 10; i++) {
