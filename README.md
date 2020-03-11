@@ -14,25 +14,38 @@ continuously redrawing objects and rendering new frames.
 
 ## Features
 
-- The main feature is obviously the game itself. I built the game to have 4 evenly sized lanes 
+# The Game!
+
+The main feature is obviously the game itself. I built the game to have 4 evenly sized lanes 
 in the middle of the screen that you can navigate between by using your 'left' and 'right' arrow keys
 on your keyboard. Depending on the level, the speed and amount of asteroids vary and the goal 
 is to avoid these asteroids as they approach. 
 
 ![GamePlay](assets/images/ReadMe_gamePlay.png)
 
-- There is a map at the bottom of the screen that allows you to see which level (planet) you currently on
+# Main Menu
+
+From the Main Menu you can access the "Info" page which displays a short motivating story for why you are
+hightailing it out of our solar system, as well as the "High Scores" page which displays the top 10 best
+local high scores.
+
+![MainMenu](assets/images/ReadMe_MainMenu.png)
+
+# Map
+
+There is a map at the bottom of the screen that allows you to see which level (planet) you're currently on
 by highlighting the respective planet in a purple aura. 
 
 ![LevelIndicator](assets/images/ReadMe_level_indicator.png)
 
+# Sound Toggle
 
-- There is a speaker button that allows you to toggle the soundtrack on and off and when the game
+There is a speaker button that allows you to toggle the soundtrack on and off and when the game
 is initially started the soundtrack automatically plays. 
 
 ![SoundToggle](assets/images/ReadMe_soundToggle.png)
 
 ## Future Features
 
-- Add local Highscores
+- Add Global High Scores
 
