@@ -45,9 +45,12 @@ body {
     height: 50px;
     right: 100px;
     top: 40px;
-    background-color: white;
     border-radius: 100px;
     border: 2px solid purple;
+}
+
+.sound-icon-and-title a:hover {
+    border: 2px solid rgb(197, 0, 197);
 }
 
 .title {
