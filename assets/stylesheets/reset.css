@@ -25,28 +25,28 @@ article,
 footer,
 time,
 small {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font: inherit;
-    color: inherit;
-    text-align: inherit;
-    text-decoration: inherit;
-    vertical-align: inherit;
-    box-sizing: inherit;
-    /* background: transparent; */
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font: inherit;
+	color: inherit;
+	text-align: inherit;
+	text-decoration: inherit;
+	vertical-align: inherit;
+	box-sizing: inherit;
+	/* background: transparent; */
 }
 
 ul,
 li {
-    list-style: none;
+	list-style: none;
 }
 
 img {
-    display: block;
-    width: 100%;
-    height: auto;
+	display: block;
+	width: 100%;
+	height: auto;
 }
 
 input[type="password"],
@@ -55,15 +55,13 @@ input[type="text"],
 input[type="submit"],
 textarea,
 button {
-    /*
-  Get rid of native styling. Read more here:
-  http://css-tricks.com/almanac/properties/a/appearance/
-  */
-    -webkit-appearance: none;
-    -moz-appearance: none;
+  /* Get rid of native styling. Read more here:
+  http://css-tricks.com/almanac/properties/a/appearance/ */
+	-webkit-appearance: none;
+	-moz-appearance: none;
 }
 
 button,
 input[type="submit"] {
-    cursor: pointer;
+	cursor: pointer;
 }

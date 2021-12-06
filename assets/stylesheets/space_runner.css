@@ -1,497 +1,485 @@
 body {
-    background-color: black;
+	background-color: black;
 }
 
 .img-and-title {
-    position: relative;
+	position: relative;
 }
 
 #sound-icon {
-    position: absolute;
-    width: 45px;
-    top: 30px;
-    left: 60px;
-    /* animation: fadeAndScale 1.5s ease-in; */
+	position: absolute;
+	width: 45px;
+	top: 30px;
+	left: 60px;
 }
 
 #sound-icon:hover {
-    position: absolute;
-    width: 45px;
-    top: 30px;
-    left: 60px;
-    cursor: pointer;
+	position: absolute;
+	width: 45px;
+	top: 30px;
+	left: 60px;
+	cursor: pointer;
 }
 
 .sound-icon-playing {
-    content:url("../images/mute.svg");
-    position: absolute;
-    width: 45px;
-    top: 30px;
-    left: 60px;
+	content:url("../images/mute.svg");
+	position: absolute;
+	width: 45px;
+	top: 30px;
+	left: 60px;
 }
 
 .sound-icon-playing:hover {
-    content: url("../images/mute.svg");
-    position: absolute;
-    width: 45px;
-    top: 30px;
-    left: 60px;
-    cursor: pointer;
+	content: url("../images/mute.svg");
+	position: absolute;
+	width: 45px;
+	top: 30px;
+	left: 60px;
+	cursor: pointer;
 }
 
 .sound-icon-and-title a {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    right: 100px;
-    top: 40px;
-    border-radius: 100px;
-    border: 2px solid purple;
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	right: 100px;
+	top: 40px;
+	border-radius: 100px;
+	border: 2px solid purple;
 }
 
 .sound-icon-and-title a:hover {
-    border: 2px solid rgb(197, 0, 197);
+	border: 2px solid rgb(197, 0, 197);
 }
 
 .title {
-    width: 300px;
-    margin: 0 auto;
-    margin-top: 30px;
-    font-size: 40px;
-    margin-bottom: 20px;
-    /* font-family: 'Play', sans-serif; */
-    font-family: 'Audiowide', cursive;
-    /* font-family: 'Fugaz One', cursive; */
-    color: white;
-    
-    animation: fadeAndScale 1.5s ease-in;
+	width: 300px;
+	margin: 0 auto;
+	margin-top: 30px;
+	font-size: 40px;
+	margin-bottom: 20px;
+	font-family: 'Audiowide', cursive;
+	color: white;
+	animation: fadeAndScale 1.5s ease-in;
 }
 
 @keyframes fadeAndScale {
-    from {
-        opacity: 0;
-        color: blue;
-    }
-    to {
-        opacity: 1;
-        color: white;
-    }
+	from {
+		opacity: 0;
+		color: blue;
+	}
+	to {
+		opacity: 1;
+		color: white;
+	}
 }
 
 /* Main Menu -----------------------------------------------------------------*/
 
 .main-menu-screen {
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: white;
-    margin-top: -404px;
-    width: 800px;
-    height: 405px;
-    /* opacity: 0.9; */
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white;
+	margin-top: -404px;
+	width: 800px;
+	height: 405px;
+	/* opacity: 0.9; */
 }
 
 .main-menu {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -404px;
-    width: 800px;
-    height: 405px;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -404px;
+	width: 800px;
+	height: 405px;
 }
 
 .clear {
-    display: none;
+	display: none;
 }
 
 #your-score {
-    font-family: 'Audiowide', cursive;
-    width: 220px;
-    margin: 0 auto;
-    margin-top: 30px;
+	font-family: 'Audiowide', cursive;
+	width: 220px;
+	margin: 0 auto;
+	margin-top: 30px;
 }
 
 /* Play button----------------------------------------------------------------*/
 
 .play-btn {
-    padding: 6px;
-    margin: 0 auto;
-    margin-top: 10%;
-    width: 100px;
-    height: 100px;
-    border: none;
-    outline: none;
-    color: black;
-    background: rgb(173, 173, 173);
-    cursor: pointer;
-    position: relative;
-    z-index: 0;
-    border-radius: 10px;
-    text-align: center;
+	padding: 6px;
+	margin: 0 auto;
+	margin-top: 10%;
+	width: 100px;
+	height: 100px;
+	border: none;
+	outline: none;
+	color: black;
+	background: rgb(173, 173, 173);
+	cursor: pointer;
+	position: relative;
+	z-index: 0;
+	border-radius: 10px;
+	text-align: center;
 }
 
 .play-btn:before {
-    content: '';
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    background-size: 400%;
-    z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-    border-radius: 10px;
+	content: '';
+	background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	background-size: 400%;
+	z-index: -1;
+	filter: blur(5px);
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	animation: glowing 20s linear infinite;
+	opacity: 0;
+	transition: opacity .3s ease-in-out;
+	border-radius: 10px;
 }
 
 .play-btn:active {
-    color: #000
+	color: #000
 }
 
 .play-btn:active:after {
-    background: transparent;
+	background: transparent;
 }
 
 .play-btn:hover:before {
-    opacity: 1;
+	opacity: 1;
 }
 
 .play-btn:after {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: white;
-    left: 0;
-    top: 0;
-    border-radius: 10px;
+	z-index: -1;
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: white;
+	left: 0;
+	top: 0;
+	border-radius: 10px;
 }
 
 .info-and-highscores {
-    margin-top: 12%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    font-family: 'Audiowide', cursive;
-    font-size: 25px;
+	margin-top: 12%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	font-family: 'Audiowide', cursive;
+	font-size: 25px;
 }
 
 .info {
-    width: 70px;
-    height: 35px;
-    border: none;
-    outline: none;
-    color: black;
-    background: rgb(173, 173, 173);
-    cursor: pointer;
-    position: relative;
-    z-index: 0;
-    border-radius: 10px;
-    text-align: center;
-    padding: 4px;
+	width: 70px;
+	height: 35px;
+	border: none;
+	outline: none;
+	color: black;
+	background: rgb(173, 173, 173);
+	cursor: pointer;
+	position: relative;
+	z-index: 0;
+	border-radius: 10px;
+	text-align: center;
+	padding: 4px;
 }
 
 .info:before {
-    content: '';
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    background-size: 400%;
-    z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-    border-radius: 10px;
+	content: '';
+	background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	background-size: 400%;
+	z-index: -1;
+	filter: blur(5px);
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	animation: glowing 20s linear infinite;
+	opacity: 0;
+	transition: opacity .3s ease-in-out;
+	border-radius: 10px;
 }
 
 .info:active {
-    color: #000
+	color: #000
 }
 
 .info:active:after {
-    background: transparent;
+	background: transparent;
 }
 
 .info:hover:before {
-    opacity: 1;
+	opacity: 1;
 }
 
 .info:after {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: white;
-    left: 0;
-    top: 0;
-    border-radius: 10px;
+	z-index: -1;
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: white;
+	left: 0;
+	top: 0;
+	border-radius: 10px;
 }
 
 .highscores {
-    width: 180px;
-    height: 35px;
-    border: none;
-    outline: none;
-    color: black;
-    background: rgb(173, 173, 173);
-    cursor: pointer;
-    position: relative;
-    z-index: 0;
-    border-radius: 10px;
-    text-align: center;
-    padding: 4px;
+	width: 180px;
+	height: 35px;
+	border: none;
+	outline: none;
+	color: black;
+	background: rgb(173, 173, 173);
+	cursor: pointer;
+	position: relative;
+	z-index: 0;
+	border-radius: 10px;
+	text-align: center;
+	padding: 4px;
 }
 
 .highscores:before {
-    content: '';
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    background-size: 400%;
-    z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-    border-radius: 10px;
+	content: '';
+	background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	background-size: 400%;
+	z-index: -1;
+	filter: blur(5px);
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	animation: glowing 20s linear infinite;
+	opacity: 0;
+	transition: opacity .3s ease-in-out;
+	border-radius: 10px;
 }
 
 .highscores:active {
-    color: #000
+	color: #000
 }
 
 .highscores:active:after {
-    background: transparent;
+	background: transparent;
 }
 
 .highscores:hover:before {
-    opacity: 1;
+	opacity: 1;
 }
 
 .highscores:after {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: white;
-    left: 0;
-    top: 0;
-    border-radius: 10px;
+	z-index: -1;
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: white;
+	left: 0;
+	top: 0;
+	border-radius: 10px;
 }
 
 @keyframes glowing {
-    0% {
-        background-position: 0 0;
-    }
+	0% {
+		background-position: 0 0;
+	}
 
-    50% {
-        background-position: 400% 0;
-    }
+	50% {
+		background-position: 400% 0;
+	}
 
-    100% {
-        background-position: 0 0;
-    }
+	100% {
+		background-position: 0 0;
+	}
 }
-
-
-
 
 /* Game Canvas ---------------------------------------------------------------*/
 
 .game-canvas {
-    width: 800px;
-    margin: 0 auto;
-    border: 1px solid blue;
-    z-index: 2;
+	width: 800px;
+	margin: 0 auto;
+	border: 1px solid blue;
+	z-index: 2;
 }
 
 /* Planet Styles -------------------------------------------------------------*/
 
 .planets {
-    /* margin-top: -30px; */
-    margin-top: -3%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    overflow: hidden;
+	margin-top: -3%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	overflow: hidden;
 }
 
 #sun {
-    width: 350px;
-    margin-left: -200px;
+	width: 350px;
+	margin-left: -200px;
 }
 
 #mercury {
-    width: 60px;
-    margin-left: 3%;
+	width: 60px;
+	margin-left: 3%;
 }
 
 #venus {
-    width: 90px;
-    margin-left: 2%;
+	width: 90px;
+	margin-left: 2%;
 }
 
 #earth {
-    width: 130px;
-    margin-left: 2%;
+	width: 130px;
+	margin-left: 2%;
 }
 
 #mars {
-    width: 110px;
-    margin-left: 2%;
+	width: 110px;
+	margin-left: 2%;
 }
 
 #jupiter {
-    width: 200px;
-    margin-left: 2%;
+	width: 200px;
+	margin-left: 2%;
 }
 
 #saturn {
-    width: 180px;
-    margin-left: 2%;
+	width: 180px;
+	margin-left: 2%;
 }
 
 #uranus {
-    width: 150px;
-    margin-left: 2%;
+	width: 150px;
+	margin-left: 2%;
 }
 
 #neptune {
-    width: 140px;
-    margin-left: 2%;
+	width: 140px;
+	margin-left: 2%;
 }
 
 #pluto {
-    width: 30px;
-    margin-left: 2%;
+	width: 30px;
+	margin-left: 2%;
 }
 
 .select-planet {
-    border-top: 4px solid purple;
-    border-radius: 100px;
-    padding-top: 10px;
-    box-shadow: 0 0 20px purple;
+	border-top: 4px solid purple;
+	border-radius: 100px;
+	padding-top: 10px;
+	box-shadow: 0 0 20px purple;
 }
-
-/* canvas:focus {
-    outline: none;
-} */
 
 /* Info Page------------------------------------------------------------------*/
 
 .info-page {
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -404px;
-    width: 800px;
-    height: 405px;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -404px;
+	width: 800px;
+	height: 405px;
 }
 
 .arrow-and-back {
-    display: flex;
-    flex-direction: row;
-    margin-left: 10px;
-    margin-top: 10px;
+	display: flex;
+	flex-direction: row;
+	margin-left: 10px;
+	margin-top: 10px;
 }
 
 .info-back-button {
-    color: rgb(0, 0, 206);
-    font-family: 'Audiowide',cursive;
+	color: rgb(0, 0, 206);
+	font-family: 'Audiowide',cursive;
 }
 
 .material-icons {
-    color: blue;
+	color: blue;
 }
 
 .info-page-header {
-    margin: 0 auto;
-    margin-top: 25px;
-    margin-bottom: 15px;
-    font-family: 'Audiowide', cursive;
-    font-size: 30px;
-    color: rgb(0, 0, 206);
-    border: 3px solid rgb(35, 57, 255);
-    padding: 10px;
+	margin: 0 auto;
+	margin-top: 25px;
+	margin-bottom: 15px;
+	font-family: 'Audiowide', cursive;
+	font-size: 30px;
+	color: rgb(0, 0, 206);
+	border: 3px solid rgb(35, 57, 255);
+	padding: 10px;
 }
 
 .info-page-paragraph {
-    width: 70%;
-    height: 40%;
-    margin: 0 auto;
-    font-family: 'Audiowide',cursive;
+	width: 70%;
+	height: 40%;
+	margin: 0 auto;
+	font-family: 'Audiowide',cursive;
 }
 
 /* High scores page-----------------------------------------------------------*/
 
 .high-scores-page {
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -404px;
-    width: 800px;
-    height: 405px;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -404px;
+	width: 800px;
+	height: 405px;
 }
 
 .highscores-page-header {
-    margin: 0 auto;
-    margin-top: 15px;
-    margin-bottom: 0px;
-    font-family: 'Audiowide', cursive;
-    font-size: 30px;
-    color: rgb(0, 0, 206);
-    border: 3px solid rgb(35, 57, 255);
-    padding: 10px;
+	margin: 0 auto;
+	margin-top: 15px;
+	margin-bottom: 0px;
+	font-family: 'Audiowide', cursive;
+	font-size: 30px;
+	color: rgb(0, 0, 206);
+	border: 3px solid rgb(35, 57, 255);
+	padding: 10px;
 }
 
 table {
-    border: 1px solid black;
-    width: 400px;
-    margin: 0 auto;
-    margin-top: 15px;
-    font-family: 'Audiowide', cursive;
-    font-size: 15px;
-    background-image: linear-gradient(rgb(71, 71, 255), rgb(146, 146, 146));
-    color: white;
+	border: 1px solid black;
+	width: 400px;
+	margin: 0 auto;
+	margin-top: 15px;
+	font-family: 'Audiowide', cursive;
+	font-size: 15px;
+	background-image: linear-gradient(rgb(71, 71, 255), rgb(146, 146, 146));
+	color: white;
 }
 
 tr {
-    text-align: center;
+	text-align: center;
 }
 
 /* Controls-------------------------------------------------------------------*/
 
 .controls {
-    font-family: sans-serif;
-    text-align: center;
-    color: lightgray;
-    margin-top: 10px;
-    vertical-align: middle;
+	font-family: sans-serif;
+	text-align: center;
+	color: lightgray;
+	margin-top: 10px;
+	vertical-align: middle;
 }
 
 .arrow-key {
-    display: inline;
-    height: 20px;
-    width: 20px;
+	display: inline;
+	height: 20px;
+	width: 20px;
 }
