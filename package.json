@@ -20,7 +20,7 @@
     "babel-loader": "^8.0.6",
     "regenerator-runtime": "^0.13.3",
     "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10"
+    "webpack-cli": "^3.3.12"
   },
   "devDependencies": {
     "gh-pages": "^2.2.0"
